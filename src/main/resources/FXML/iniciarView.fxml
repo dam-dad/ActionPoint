@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -39,9 +38,9 @@
       </HBox>
       <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">
          <children>
-            <Button fx:id="sesionButton" mnemonicParsing="false" text="Iniciar secion" />
+            <Button fx:id="sesionButton" mnemonicParsing="false" onAction="#onIniciarAction" text="Iniciar sesion" />
+            <Button fx:id="crearUsuarioButton" mnemonicParsing="false" onAction="#onCrearAction" text="Crear cuenta" />
          </children>
       </HBox>
-      <Hyperlink fx:id="crearCuentaLink" text="¿Crear cuenta?" />
    </children>
 </VBox>
