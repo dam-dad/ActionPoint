@@ -23,9 +23,9 @@
       <Label text="Tema Oscuro" />
       <Slider fx:id="temaOscuroSlider" majorTickUnit="1.0" max="1.0" maxWidth="1.0" minorTickCount="0" />
       <ComboBox fx:id="filtrosCombo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="                    Fltros" VBox.vgrow="ALWAYS" />
-      <Button fx:id="historialButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Historial" VBox.vgrow="ALWAYS" />
-      <Button fx:id="avatarButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cambiar Avatar" VBox.vgrow="ALWAYS" />
-      <Button fx:id="cerrarCesionButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cerrar cesion" VBox.vgrow="ALWAYS" />
+      <Button fx:id="historialButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onHistorialAction" text="Historial" VBox.vgrow="ALWAYS" />
+      <Button fx:id="avatarButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCambiarAction" text="Cambiar Avatar" VBox.vgrow="ALWAYS" />
+      <Button fx:id="cerrarCesionButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCerrarAction" text="Cerrar cesion" VBox.vgrow="ALWAYS" />
    </children>
    <padding>
       <Insets top="25.0" />
