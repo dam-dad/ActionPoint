@@ -12,45 +12,42 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
+public class RootController implements Initializable {
+	opcionesController opciones = new opcionesController();
 
-public class RootController implements Initializable{
-	opcionesController opciones=new opcionesController();
 	public RootController() throws IOException {
-		FXMLLoader loader=new FXMLLoader(getClass().getResource("/fxml/noticiasView.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/noticiasView.fxml"));
 		loader.setController(this);
 		loader.load();
-}
-	   @FXML
-	    private BorderPane View;
+	}
 
-	    @FXML
-	    private TextField busquedaField;
+	@FXML
+	private BorderPane View;
 
-	    @FXML
-	    private Button buscarButton;
+	@FXML
+	private TextField busquedaField;
 
-	    @FXML
-	    private Button borrarButton;
+	@FXML
+	private Button buscarButton;
 
-	    @FXML
-	    private Tab periodicoTab;
+	@FXML
+	private Button borrarButton;
 
-	    @FXML
-	    private Tab tvTab;
+	@FXML
+	private Tab periodicoTab;
 
-	    @FXML
-	    private BorderPane leftPane;
+	@FXML
+	private Tab tvTab;
 
+	@FXML
+	private BorderPane leftPane;
 
-	    
-	  public BorderPane getView() {
+	public BorderPane getView() {
 		return View;
 	}
 
-		public void initialize(URL location, ResourceBundle resources) {
-			leftPane.setTop(opciones.getView());
-			
-			
-			
+	public void initialize(URL location, ResourceBundle resources) {
+		leftPane.setTop(opciones.getView());
 
-}}
+	}
+}
