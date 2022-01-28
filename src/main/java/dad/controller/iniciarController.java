@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 public class iniciarController implements Initializable {
 	crearController crear = new crearController();
-	
+	RootController root=new RootController();
 
 	Stage primaryStage = new Stage();
 
@@ -56,7 +56,7 @@ public class iniciarController implements Initializable {
 
 	@FXML
 	void onIniciarAction(ActionEvent event) {
-
+view.setCenter(root.getView());
 	}
 
 	public BorderPane getView() {
