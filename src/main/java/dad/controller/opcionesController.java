@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -41,6 +42,21 @@ public class opcionesController implements Initializable {
 
 		@FXML
 		private Button cerrarCesionButton;
+		
+	    @FXML
+	    void onCambiarAction(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void onCerrarAction(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void onHistorialAction(ActionEvent event) {
+
+	    }
 
 		public VBox getView() {
 			return view;
