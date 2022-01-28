@@ -18,12 +18,9 @@ import javafx.stage.Stage;
 
 public class iniciarController implements Initializable {
 	crearController crear = new crearController();
-<<<<<<< HEAD
-	RootController root=new RootController();
-=======
->>>>>>> 97222dae9ad3f14a8bd1c798b57c7b9e35b16c27
 
-	Stage primaryStage = new Stage();
+	RootController root=new RootController();
+
 
 	public iniciarController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/iniciarView.fxml"));
