@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox fx:id="central" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -42,7 +41,7 @@
             </HBox>
             <HBox alignment="CENTER" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button fx:id="cesionButton" mnemonicParsing="false" onAction="#onIniciarAction" text="Iniciar sesion" />
+                  <Button fx:id="sesionButton" mnemonicParsing="false" onAction="#onIniciarAction" text="Iniciar sesion" />
                   <Button fx:id="crearButton" mnemonicParsing="false" onAction="#onCrearAction" text="Crear cuenta" />
                </children>
             </HBox>
