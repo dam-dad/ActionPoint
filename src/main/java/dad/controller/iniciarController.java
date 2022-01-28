@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 
 public class iniciarController implements Initializable {
 	crearController crear = new crearController();
-	
 
 	Stage primaryStage = new Stage();
 
