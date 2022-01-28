@@ -19,8 +19,7 @@ import javafx.stage.Stage;
 public class iniciarController implements Initializable {
 	crearController crear = new crearController();
 
-	RootController root=new RootController();
-
+	RootController root = new RootController();
 
 	public iniciarController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/iniciarView.fxml"));
@@ -56,7 +55,7 @@ public class iniciarController implements Initializable {
 
 	@FXML
 	void onIniciarAction(ActionEvent event) {
-view.setCenter(root.getView());
+		view.setCenter(root.getView());
 	}
 
 	public BorderPane getView() {
