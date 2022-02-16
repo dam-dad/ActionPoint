@@ -11,21 +11,32 @@ import com.kwabenaberko.newsapilib.models.response.SourcesResponse;
 
 public class Main {
 
+	public static String titulo="";
+	
 	public static void main(String[] args) {
 
+		
+		
+		
 		NewsApiClient newsApiClient = new NewsApiClient("900c5aa5b579479b98c951399bf6adb1");
 
 		NewsApiClient.ArticlesResponseCallback callback = new NewsApiClient.ArticlesResponseCallback() {
 			@Override
-			public void onSuccess(ArticleResponse response) {
+			public void  onSuccess(ArticleResponse response) {
 				System.out.println("Ya tengo un resultado!!!! " + response.getArticles().size());
 				for (Article article : response.getArticles()) {
-					System.out.println("----------" + article.getTitle() + "-------------");
-					System.out.println(article.getDescription());
-					System.out.println(article.getAuthor());
-					System.out.println(article.getPublishedAt());
-					System.out.println(article.getUrl());
+//					System.out.println("----------" + article.getTitle() + "-------------");
+//					System.out.println(article.getDescription());
+//					System.out.println(article.getAuthor());
+//					System.out.println(article.getPublishedAt());
+//					System.out.println(article.getUrl());
+//					System.out.println(article.getUrlToImage());
+					
+					titulo=article.getTitle();
+					
+					
 				}
+				
 			}
 
 			@Override
@@ -40,7 +51,7 @@ public class Main {
 		// /v2/top-headlines
 //		newsApiClient.getTopHeadlines(new TopHeadlinesRequest.Builder().q("reforma loboral").language("es").build(), callback);
 
-		// /v2/top-headlines/sources
+// /v2/top-headlines/sources
 //		newsApiClient.getSources(new SourcesRequest.Builder().build(),
 //				new NewsApiClient.SourcesCallback() {
 //					@Override
@@ -59,6 +70,14 @@ public class Main {
 //					}
 //				});
 
+	}
+
+	public static String getTitulo() {
+		return titulo;
+	}
+
+	public static void setTitulo(String titulo) {
+		Main.titulo = titulo;
 	}
 
 }

@@ -9,12 +9,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 public class RootController implements Initializable {
 	opcionesController opciones = new opcionesController();
-
+	NoticiasController noticiasController = new NoticiasController();
+	
+	
 	public RootController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/noticiasView.fxml"));
 		loader.setController(this);
@@ -39,6 +42,9 @@ public class RootController implements Initializable {
 	@FXML
 	private Tab tvTab;
 
+    @FXML
+    private TabPane noticiasTabPane;
+	
 	@FXML
 	private BorderPane leftPane;
 
@@ -49,5 +55,8 @@ public class RootController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		leftPane.setTop(opciones.getView());
 
+		periodicoTab.setContent(noticiasController.getRootGridPane());
+		
+		
 	}
 }
