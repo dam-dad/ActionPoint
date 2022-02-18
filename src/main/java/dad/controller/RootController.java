@@ -9,17 +9,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 public class RootController implements Initializable {
-	opcionesController opciones = new opcionesController();
 
-	public RootController() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/noticiasView.fxml"));
-		loader.setController(this);
-		loader.load();
-	}
+	OpcionesController opcionesController = new OpcionesController();
+	NoticiasController noticiasController = new NoticiasController();
 
 	@FXML
 	private BorderPane View;
@@ -40,14 +37,26 @@ public class RootController implements Initializable {
 	private Tab tvTab;
 
 	@FXML
+	private TabPane noticiasTabPane;
+
+	@FXML
 	private BorderPane leftPane;
+
+	public RootController() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootView.fxml"));
+		loader.setController(this);
+		loader.load();
+	}
+
+	public void initialize(URL location, ResourceBundle resources) {
+
+		leftPane.setTop(opcionesController.getView());
+		periodicoTab.setContent(noticiasController.getRootGridPane());
+
+	}
 
 	public BorderPane getView() {
 		return View;
 	}
 
-	public void initialize(URL location, ResourceBundle resources) {
-		leftPane.setTop(opciones.getView());
-
-	}
 }
