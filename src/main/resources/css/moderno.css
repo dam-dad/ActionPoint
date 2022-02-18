@@ -1,0 +1,79 @@
+.root{
+-fx-background-color: #3A3736;
+
+
+}
+
+.button{
+	-fx-font-size: 10pt;
+	-fx-text-fill: white;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-color:transparent;
+	-fx-font-weight: bold;
+}
+#usuarioLabel, #contraLabel, #confirmarLabel, #userLabel, #paswordLabel{
+-fx-text-fill: white;
+-fx-font-weight: bold;
+}
+
+.button:focused{
+	-fx-border-color:black;
+}
+.button:armed {
+	-fx-background-color: yellow;
+}
+.button:hover{
+-fx-background-color:darkgray;
+}
+.button:hover:default{
+	-fx-background-color:red;
+}
+
+.button:default{
+	-fx-background-color:orangered;
+}
+.combo-box{
+    -fx-font-size: 10pt;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-color:transparent;
+	-fx-text-alignment: center;
+	-fx-text-inner-color: white;
+	-fx-font-weight: bold;
+}
+.combo-box > .list-cell {
+
+-fx-text-fill: white;
+}
+.combo-box:hover{
+-fx-background-color:darkgray;
+}
+
+#avatarImages{
+-fx-background-radius: 5;
+
+}
+.tab {
+    -fx-background-color: #3A3736;
+    
+}
+
+.tab-pane>*.tab-header-area>*.tab-header-background
+{
+    -fx-background-color:  -fx-text-box-border, #333333;
+
+}
+
+.tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.tab:selected {
+    -fx-background-color: #616161;
+}
+.context-menu{
+
+-fx-text-fill:black;
+}
