@@ -1,0 +1,45 @@
+
+
+.button{
+	-fx-font-size: 10pt;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-color:transparent;
+	-fx-text-fill: white;
+}
+.button:focused{
+	-fx-border-color:orange;
+}
+.button:armed {
+	-fx-background-color: yellow;
+}
+
+.button:hover{
+	-fx-text-fill: orange;
+	-fx-background-color:white;
+}
+
+#historialButton:pressed,#avatarButton:pressed,#cerrarSesionButton:pressed, #filtrosCombo:pressed{
+	-fx-text-fill:orange;
+	-fx-background-color:white;
+}
+.button:hover:default{
+	-fx-background-color:red;
+}
+
+.button:default{
+	-fx-background-color:orangered;
+
+}
+.combo-box{
+    -fx-font-size: 10pt;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-color:transparent;
+	-fx-text-alignment: center;
+}
+
+#avatarImages{
+-fx-background-radius: 5;
+
+}
