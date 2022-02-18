@@ -29,7 +29,7 @@
                <graphic>
                   <ImageView pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/png-clipart-computer-icons-x-mark-old-letters-angle-logo.png" />
+                        <Image url="@../images/cancelar.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -43,14 +43,14 @@
    <center>
       <TabPane fx:id="noticiasTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab fx:id="periodicoTab" text="Periodico">
+          <Tab fx:id="periodicoTab" text="Periódico">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
                <graphic>
                   <ImageView pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/descarga.png" />
+                        <Image url="@../images/periodico.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -62,7 +62,7 @@
                <graphic>
                   <ImageView pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/descargar_2.png" />
+                        <Image url="@../images/tele.png" />
                      </image>
                   </ImageView>
                </graphic>

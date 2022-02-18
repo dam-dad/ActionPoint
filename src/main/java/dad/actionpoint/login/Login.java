@@ -1,4 +1,4 @@
-package login;
+package dad.actionpoint.login;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

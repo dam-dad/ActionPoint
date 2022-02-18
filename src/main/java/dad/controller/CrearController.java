@@ -14,14 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
-
-public class crearController implements Initializable {
-
-	public crearController() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/crearView.fxml"));
-		loader.setController(this);
-		loader.load();
-	}
+public class CrearController implements Initializable {
 
 	@FXML
 	private BorderPane view;
@@ -44,19 +37,25 @@ public class crearController implements Initializable {
 	@FXML
 	private Button crearButton;
 
-	@FXML
-	void onCrearAction(ActionEvent event) throws IOException {
-		iniciarController inicio = new iniciarController();
-		view.setCenter(inicio.getView());
-	}
-
-	public BorderPane getView() {
-		return view;
+	public CrearController() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/CrearView.fxml"));
+		loader.setController(this);
+		loader.load();
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@FXML
+	void onCrearAction(ActionEvent event) throws IOException {
+		IniciarController inicio = new IniciarController();
+		view.setCenter(inicio.getView());
+	}
+
+	public BorderPane getView() {
+		return view;
 	}
 
 }

@@ -11,35 +11,29 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-public class NoticiasController implements Initializable{
+public class NoticiasController implements Initializable {
 
-	
-	 @FXML
-	 private GridPane RootGridPane;
-	
 	@FXML
-    private ImageView imagen1ImageView;
+	private GridPane RootGridPane;
 
-    @FXML
-    private TextArea primerTextArea;
+	@FXML
+	private ImageView imagen1ImageView;
 
-    
-    
-    public  NoticiasController() throws IOException {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/VisualizacionNoticias.fxml"));
+	@FXML
+	private TextArea primerTextArea;
+
+	public NoticiasController() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/NoticiasView.fxml"));
 		loader.setController(this);
 		loader.load();
-    	
-    	
+
 	}
-    
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
-		
-		
-		primerTextArea.setText( newsapilib.Main.getTitulo());
-		System.out.println( newsapilib.Main.getTitulo());
+
+		primerTextArea.setText(dad.actionpoint.newsapi.Main.getTitulo());
+		System.out.println(dad.actionpoint.newsapi.Main.getTitulo());
 	}
 
 	public GridPane getRootGridPane() {
@@ -66,9 +60,4 @@ public class NoticiasController implements Initializable{
 		this.primerTextArea = primerTextArea;
 	}
 
-	
-	
-	
-	
-	
 }

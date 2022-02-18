@@ -1,4 +1,4 @@
-package login;
+package dad.actionpoint.login;
 
 public class ModificarCuenta {
 

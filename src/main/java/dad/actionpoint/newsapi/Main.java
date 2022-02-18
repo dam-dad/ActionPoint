@@ -1,4 +1,4 @@
-package newsapilib;
+package dad.actionpoint.newsapi;
 
 import com.kwabenaberko.newsapilib.NewsApiClient;
 import com.kwabenaberko.newsapilib.models.Article;

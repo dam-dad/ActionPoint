@@ -1,13 +1,10 @@
-package dad.codegen;
+package dad.actionpoint;
 
 public class Main {
 
 	public static void main(String[] args) {
 
 		App.main(args);
-
-		newsapilib.Main.main(args);
-		
 
 	}
 

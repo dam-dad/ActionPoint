@@ -3,29 +3,22 @@ package dad.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
-public class iniciarController implements Initializable {
-	crearController crear = new crearController();
-
-	RootController root = new RootController();
-
-	public iniciarController() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/iniciarView.fxml"));
-		loader.setController(this);
-		loader.load();
-	}
+public class IniciarController implements Initializable {
+	
+	private CrearController crearController = new CrearController();
+	private RootController rootController = new RootController();
 
 	@FXML
 	private BorderPane view;
@@ -48,23 +41,29 @@ public class iniciarController implements Initializable {
 	@FXML
 	private Button crearButton;
 
+	public IniciarController() throws IOException {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/IniciarView.fxml"));
+		loader.setController(this);
+		loader.load();
+	}
+
+	public void initialize(URL location, ResourceBundle resources) {
+
+	}
+	
 	@FXML
 	void onCrearAction(ActionEvent event) {
-		view.setCenter(crear.getView());
+		view.setCenter(crearController.getView());
 	}
 
 	@FXML
 	void onIniciarAction(ActionEvent event) {
-		view.setCenter(root.getView());
+		view.setCenter(rootController.getView());
 	}
 
 	public BorderPane getView() {
 		return view;
 	}
 
-	@SuppressWarnings("static-access")
-	public void initialize(URL location, ResourceBundle resources) {
-		view.setAlignment(view, Pos.CENTER);
-	}
 
 }

@@ -1,17 +1,21 @@
-package dad.codegen;
+package dad.actionpoint;
 
-import dad.controller.iniciarController;
+import dad.controller.RootController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
-	private iniciarController root;
+	
+	private RootController rootController;
 
 	public void start(Stage primaryStage) throws Exception {
-		root = new iniciarController();
-		Scene scene = new Scene(root.getView());
-		primaryStage.setTitle("2");
+		
+		rootController = new RootController();
+		
+		Scene scene = new Scene(rootController.getView());
+		
+		primaryStage.setTitle("ActionPoint");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
