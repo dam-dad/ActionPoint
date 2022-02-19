@@ -1,57 +1,49 @@
 .root{
--fx-background-color: #3A3736;
-
-
+	-fx-background-color: #3A3736;
 }
 
 .button{
-	-fx-font-size: 10pt;
+	-fx-font-size: 10.0pt;
 	-fx-text-fill: white;
-	-fx-background-radius: 0;
-	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius: 0.0;
+	-fx-background-insets: 0.0 0.0 0.0 0.0;
 	-fx-background-color:transparent;
 	-fx-font-weight: bold;
 }
-#usuarioLabel, #contraLabel, #confirmarLabel, #userLabel, #paswordLabel{
--fx-text-fill: white;
--fx-font-weight: bold;
+
+.Label{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
 }
 
 .button:focused{
-	-fx-border-color:black;
-}
-.button:armed {
-	-fx-background-color: yellow;
-}
-.button:hover{
--fx-background-color:darkgray;
-}
-.button:hover:default{
-	-fx-background-color:red;
+	-fx-border-color:white;
 }
 
-.button:default{
-	-fx-background-color:orangered;
+.button:hover{
+	-fx-background-color:darkgray;
 }
+
 .combo-box{
-    -fx-font-size: 10pt;
-	-fx-background-radius: 0;
-	-fx-background-insets: 0 0 0 0;
+    -fx-font-size: 10.0pt;
+	-fx-background-radius: 0.0;
+	-fx-background-insets: 0.0 0.0 0.0 0.0;
 	-fx-background-color:transparent;
-	-fx-text-alignment: center;
 	-fx-text-inner-color: white;
 	-fx-font-weight: bold;
 }
+
 .combo-box > .list-cell {
 
--fx-text-fill: white;
+	-fx-text-fill: white;
 }
+
 .combo-box:hover{
--fx-background-color:darkgray;
+	-fx-background-color:darkgray;
 }
 
 #avatarImages{
--fx-background-radius: 5;
+	-fx-background-radius: 5.0;
 
 }
 .tab {
@@ -73,7 +65,14 @@
 .tab:selected {
     -fx-background-color: #616161;
 }
-.context-menu{
 
--fx-text-fill:black;
+.context-menu{
+	-fx-text-fill:black;
 }
+
+.toggle-button{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+
