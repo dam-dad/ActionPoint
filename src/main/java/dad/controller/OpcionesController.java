@@ -6,6 +6,8 @@ import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXToggleButton;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,8 +47,22 @@ public class OpcionesController implements Initializable {
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
-//		view.getStylesheets().add(getClass().getResource("/css/clasico.css").toExternalForm());
+		temaToggle.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
+			@Override
+			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+				if (temaToggle.isSelected() == true) {
+					view.getStylesheets().clear();
+					temaToggle.getScene().getRoot().getStylesheets()
+							.add(getClass().getResource("/css/moderno.css").toString());
+				} else {
+					view.getStylesheets().clear();
+					temaToggle.getScene().getRoot().getStylesheets()
+							.remove((getClass().getResource("/css/moderno.css").toString()));
+				}
+
+			}
+		});
 	}
 
 	@FXML
