@@ -1,102 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<GridPane fx:id="RootGridPane" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="400.0" prefWidth="600.0"
-	xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="RootGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
 	<columnConstraints>
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
-			prefWidth="100.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
-			prefWidth="100.0" />
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 	</columnConstraints>
 	<rowConstraints>
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
-		<RowConstraints minHeight="10.0" prefHeight="30.0"
-			vgrow="SOMETIMES" />
+		<RowConstraints fillHeight="false" vgrow="ALWAYS" />
+		<RowConstraints fillHeight="false" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 	</rowConstraints>
-	<children>
-		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-			<children>
-				<TextArea fx:id="primerTextArea" />
-			</children>
-		</HBox>
-		<HBox alignment="BOTTOM_RIGHT" prefHeight="100.0"
-			prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-			<children>
-				<Button mnemonicParsing="false" text="---&gt;" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
-			<children>
-				<TextArea />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
-			<children>
-				<TextArea />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
-			<children>
-				<TextArea />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
-			<children>
-				<TextArea />
-			</children>
-		</HBox>
-		<HBox GridPane.columnIndex="1">
-			<children>
-				<ImageView fx:id="imagen1ImageView" pickOnBounds="true"
-					preserveRatio="true" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0"
-			GridPane.columnIndex="1" GridPane.rowIndex="1">
-			<children>
-				<ImageView pickOnBounds="true" preserveRatio="true" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0"
-			GridPane.columnIndex="1" GridPane.rowIndex="2">
-			<children>
-				<ImageView fitHeight="67.0" fitWidth="300.0"
-					pickOnBounds="true" preserveRatio="true" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0"
-			GridPane.columnIndex="1" GridPane.rowIndex="3">
-			<children>
-				<ImageView fitHeight="67.0" fitWidth="300.0"
-					pickOnBounds="true" preserveRatio="true" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0"
-			GridPane.columnIndex="1" GridPane.rowIndex="4">
-			<children>
-				<ImageView fitHeight="67.0" fitWidth="300.0"
-					pickOnBounds="true" preserveRatio="true" />
-			</children>
-		</HBox>
-		<HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5" />
-	</children>
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" text="&lt;--" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" text="--&gt;" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="tituloText" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="descriptionText" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="publicatedText" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </VBox>
+            <Button fx:id="boton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" text="Button">
+               <graphic>
+                  <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="tituloText1" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="descriptionText1" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="publicatedText1" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </VBox>
+            <Button fx:id="boton1" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" text="Button">
+               <graphic>
+                  <ImageView fx:id="imagen1" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fx:id="tituloText11" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="descriptionText11" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="publicatedText11" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </VBox>
+            <Button fx:id="boton11" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" text="Button">
+               <graphic>
+                  <ImageView fx:id="imagen11" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
 </GridPane>
