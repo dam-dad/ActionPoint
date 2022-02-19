@@ -1,20 +1,19 @@
 .root{
--fx-background-color: white;
+-fx-background-color: #F3F3F3;
 }
 
 .button{
-	-fx-font-size: 10pt;
-	-fx-background-radius: 0;
-	-fx-background-insets: 0 0 0 0;
+	-fx-font-size: 10.0pt;
+	-fx-background-radius: 0.0;
+	-fx-background-insets: 0.0 0.0 0.0 0.0;
 	-fx-background-color:transparent;
 	-fx-font-weight: bold;
+	
 }
 .button:focused{
-	-fx-border-color:orange;
+	-fx-border-color:black;
 }
-.button:armed {
-	-fx-background-color: yellow;
-}
+
 .label{
 -fx-text-fill: black;
 -fx-font-weight: bold;
@@ -25,26 +24,19 @@
 	-fx-background-color:lightgray;
 }
 
-.button:hover:default{
-	-fx-background-color:red;
-}
-
-.button:default{
-	-fx-background-color:orangered;
-}
 .combo-box{
-    -fx-font-size: 10pt;
-	-fx-background-radius: 0;
-	-fx-background-insets: 0 0 0 0;
+    -fx-font-size: 10.0pt;
+	-fx-background-radius: 0.0;
+	-fx-background-insets: 0.0 0.0 0.0 0.0;
 	-fx-background-color:transparent;
-	-fx-text-alignment: center;
 	-fx-font-weight: bold;
 }
 .combo-box:hover{
 -fx-background-color:lightgray;
 }
+
 #avatarImages{
--fx-background-radius: 5;
+-fx-background-radius: 5.0;
 
 }
 .tab {
@@ -54,7 +46,7 @@
 
 .tab-pane>*.tab-header-area>*.tab-header-background
 {
-    -fx-background-color:  -fx-text-box-border, white;
+    -fx-background-color:  -fx-text-box-border, #F3F3F3;
     -fx-font-weight: bold;
 
 }
@@ -73,4 +65,8 @@
     -fx-text-fill: white;
 }
 
+.toggle-button{
+	-fx-text-fill: black;
+	-fx-font-weight: bold;
+}
 
