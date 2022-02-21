@@ -68,6 +68,7 @@ public class NoticiasController implements Initializable {
 
 	@FXML
 	private Text publicatedText11;
+	
 
 	@FXML
 	void onBoton(ActionEvent event) {
