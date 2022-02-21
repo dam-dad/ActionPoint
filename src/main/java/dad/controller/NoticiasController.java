@@ -342,6 +342,9 @@ public class NoticiasController implements Initializable {
 	private void atrasDatos(List<Article> articles) {
 
 		paginaLabel.setText("" + pag);
+		if(pag==1) {
+			cont=4;
+		}
 		if (pag == 2) {
 			cont = 8;
 		}
