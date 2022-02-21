@@ -8,6 +8,8 @@ import com.jfoenix.controls.JFXToggleButton;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +36,9 @@ public class OpcionesController implements Initializable {
 	private JFXToggleButton temaToggle;
 
 	@FXML
-	private ComboBox<?> filtrosCombo;
+	private ComboBox<String> filtrosCombo;
+	
+	ObservableList<String> items = FXCollections.observableArrayList("Deporte", "Moda", "Motor", "Politica", "Covid", "Inmigracion", "eSports");	
 
 	@FXML
 	private Button historialButton;
@@ -56,6 +60,11 @@ public class OpcionesController implements Initializable {
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		
+		 filtrosCombo.setItems(items);
+		
+			
 		temaToggle.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
 			@Override
