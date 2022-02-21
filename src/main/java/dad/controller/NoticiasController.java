@@ -15,13 +15,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import javafx.stage.Stage;
 
 public class NoticiasController implements Initializable {
 
@@ -38,6 +43,8 @@ public class NoticiasController implements Initializable {
 	// logic
 
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
+
+	// NoticiaWebController noticiasWeb;
 
 	// view
 
@@ -185,23 +192,14 @@ public class NoticiasController implements Initializable {
 	@FXML
 	void onNoticia1Action(ActionEvent event) {
 
-//		Runtime rt = Runtime.getRuntime();
-//		String url = urlNoticia1;
-//		try {
-//			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
-		// Create a WebView
-		WebView browser = new WebView();
-
-		// Get WebEngine via WebView
-		WebEngine webEngine = browser.getEngine();
-
-		// Load page
-		webEngine.load(urlNoticia1);
+		Runtime rt = Runtime.getRuntime();
+		String url = urlNoticia1;
+		try {
+			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -216,14 +214,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		// Create a WebView
-		WebView browser = new WebView();
-
-		// Get WebEngine via WebView
-		WebEngine webEngine = browser.getEngine();
-
-		// Load page
-		webEngine.load(urlNoticia1);
 	}
 
 	@FXML
@@ -237,14 +227,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		// Create a WebView
-		WebView browser = new WebView();
-
-		// Get WebEngine via WebView
-		WebEngine webEngine = browser.getEngine();
-
-		// Load page
-		webEngine.load(urlNoticia1);
 	}
 
 	@FXML
@@ -258,14 +240,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		// Create a WebView
-		WebView browser = new WebView();
-
-		// Get WebEngine via WebView
-		WebEngine webEngine = browser.getEngine();
-
-		// Load page
-		webEngine.load(urlNoticia1);
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
