@@ -2,6 +2,22 @@
 -fx-background-color: #F3F3F3;
 }
 
+#labeltext{
+
+-fx-background-color:transparent;
+-fx-text-fill: black;
+-fx-font-weight: bold;
+}
+
+#titulo1Text, #description1Text, #publicated1Text,#titulo2Text, #description2Text, #publicated2Text,#titulo3Text, #description3Text, #publicated3Text,#titulo4Text, #description4Text, #publicated4Text{
+-fx-fill: black;
+-fx-font-weight: bold;
+-fx-font-size: 10.0pt;
+}
+#titulo1Text,#titulo2Text,#titulo3Text,#titulo4Text{
+-fx-font-size: 20.0pt;
+}
+
 .button{
 	-fx-font-size: 10.0pt;
 	-fx-background-radius: 0.0;
@@ -9,6 +25,10 @@
 	-fx-background-color:transparent;
 	-fx-font-weight: bold;
 	
+}
+.text-field{
+-fx-text-fill: black;
+	-fx-font-weight: bold;
 }
 .button:focused{
 	-fx-border-color:black;
@@ -30,10 +50,38 @@
 	-fx-background-insets: 0.0 0.0 0.0 0.0;
 	-fx-background-color:transparent;
 	-fx-font-weight: bold;
+	
 }
 .combo-box:hover{
 -fx-background-color:lightgray;
+
 }
+.combo-box > .list-cell {
+
+	-fx-text-fill: black;
+	
+}
+
+.combo-box:hover > .list-cell {
+-fx-background-color:lightgray;
+	-fx-text-fill: black;
+	
+}
+
+.combo-box .list-cell {
+
+	-fx-background-color: #F3F3F3;
+	-fx-text-fill: black;
+	
+}
+
+.combo-box .list-cell:hover {
+
+	-fx-background-color: lightgray;
+	-fx-text-fill:black;
+	
+}
+
 
 #avatarImages{
 -fx-background-radius: 5.0;
