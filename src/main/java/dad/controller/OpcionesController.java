@@ -12,10 +12,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class OpcionesController implements Initializable {
 
@@ -39,6 +44,10 @@ public class OpcionesController implements Initializable {
 
 	@FXML
 	private Button cerrarCesionButton;
+	
+	Stage stage;
+	
+	String css=this.getClass().getResource("/css/moderno.css").toString();
 
 	public OpcionesController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/OpcionesView.fxml"));
@@ -54,15 +63,17 @@ public class OpcionesController implements Initializable {
 				if (temaToggle.isSelected() == true) {
 					view.getStylesheets().clear();
 					temaToggle.getScene().getRoot().getStylesheets()
-							.add(getClass().getResource("/css/moderno.css").toString());
+							.add(css);
 				} else {
 					view.getStylesheets().clear();
 					temaToggle.getScene().getRoot().getStylesheets()
-							.remove((getClass().getResource("/css/moderno.css").toString()));
+							.remove((css));
 				}
 
 			}
 		});
+		
+		
 	}
 
 	@FXML
@@ -73,7 +84,10 @@ public class OpcionesController implements Initializable {
 	@FXML
 	void onCerrarAction(ActionEvent event) {
 
+		salidaSesion();
+		
 	}
+	
 
 	@FXML
 	void onHistorialAction(ActionEvent event) {
@@ -84,4 +98,17 @@ public class OpcionesController implements Initializable {
 		return view;
 	}
 
+	
+	private void salidaSesion() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Cerrar Sesion");
+		alert.setHeaderText("Vas a cerrar sesion");
+		alert.setContentText("¿Quieres guardar antes de salir?");
+		
+			if(alert.showAndWait().get()== ButtonType.OK) {
+				stage = (Stage) view.getScene().getWindow();
+				stage.close();
+			}
+	}
+	
 }
