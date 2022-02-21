@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,56 +24,119 @@ import javafx.scene.text.Text;
 
 public class NoticiasController implements Initializable {
 
+	int cont = 0;
+	int pag = 1;
+
 	// logic
-	
+
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
-	
+
 	// view
 
 	@FXML
 	private GridPane RootGridPane;
 
 	@FXML
-	private Button boton;
+	private Button anteriorPaginaButton;
 
 	@FXML
-	private ImageView imagen;
+	private Label paginaLabel;
 
 	@FXML
-	private ImageView imagen1;
-	@FXML
-	private ImageView imagen11;
+	private Button siguientePaginaButton;
 
 	@FXML
-	private Text tituloText;
+	private Text titulo1Text;
 
 	@FXML
-	private Text descriptionText;
+	private Text description1Text;
 
 	@FXML
-	private Text publicatedText;
+	private Text publicated1Text;
 
 	@FXML
-	private Text tituloText1;
+	private Button noticia1Button;
 
 	@FXML
-	private Text descriptionText1;
+	private ImageView noticia1Image;
 
 	@FXML
-	private Text publicatedText1;
-	@FXML
-	private Text tituloText11;
+	private Text titulo2Text;
 
 	@FXML
-	private Text descriptionText11;
+	private Text description2Text;
 
 	@FXML
-	private Text publicatedText11;
-	
+	private Text publicated2Text;
+
+	@FXML
+	private Button noticia2Button;
+
+	@FXML
+	private ImageView noticia2Image;
+
+	@FXML
+	private Text titulo3Text;
+
+	@FXML
+	private Text description3Text;
+
+	@FXML
+	private Text publicated3Text;
+
+	@FXML
+	private Button noticia3Button;
+
+	@FXML
+	private ImageView noticia3Image;
+
+	@FXML
+	private Text titulo4Text;
+
+	@FXML
+	private Text description4Text;
+
+	@FXML
+	private Text publicated4Text;
+
+	@FXML
+	private Button noticia4Button;
+
+	@FXML
+	private ImageView noticia4Image;
 
 	@FXML
 	void onBoton(ActionEvent event) {
 
+	}
+
+	@FXML
+
+	void onSiguienteAction(ActionEvent event) {
+		if (pag == 4) {
+			siguientePaginaButton.setDisable(true);
+		} else {
+			siguientePaginaButton.setDisable(false);
+		}
+		if (pag > 0) {
+			anteriorPaginaButton.setDisable(false);
+		}
+
+		pag++;
+		paginaLabel.setText("" + pag);
+
+		NewsApiClient.ArticlesResponseCallback callback = new NewsApiClient.ArticlesResponseCallback() {
+			public void onSuccess(ArticleResponse response) {
+				cargarDatos(response.getArticles());
+			}
+
+			public void onFailure(Throwable throwable) {
+				System.err.println(throwable.getMessage());
+			}
+		};
+
+		newsApiClient.getEverything(new EverythingRequest.Builder().q("messi").language("es").pageSize(20).page(1)
+				.sortBy("publishedAt").build(), callback);
 	}
 
 	public NoticiasController() throws IOException {
@@ -82,47 +146,172 @@ public class NoticiasController implements Initializable {
 
 	}
 
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	@FXML
+	void onAtrasAction(ActionEvent event) {
 
-		
-
+		if (pag == 2) {
+			anteriorPaginaButton.setDisable(true);
+		} else {
+			anteriorPaginaButton.setDisable(false);
+		}
+		if (pag < 6) {
+			siguientePaginaButton.setDisable(false);
+		}
+		pag--;
+		paginaLabel.setText("" + pag);
 		NewsApiClient.ArticlesResponseCallback callback = new NewsApiClient.ArticlesResponseCallback() {
-			@Override
-			public void  onSuccess(ArticleResponse response) {
-				cargarDatos(response.getArticles());
+			public void onSuccess(ArticleResponse response) {
+				atrasDatos(response.getArticles());
 			}
 
-			@Override
 			public void onFailure(Throwable throwable) {
 				System.err.println(throwable.getMessage());
 			}
 		};
-		newsApiClient.getEverything(new EverythingRequest.Builder().q("reforma laboral").language("es").pageSize(5).page(1).sortBy("publishedAt").build(), callback);
-		
+
+		newsApiClient.getEverything(new EverythingRequest.Builder().q("messi").language("es").pageSize(20).page(1)
+				.sortBy("publishedAt").build(), callback);
+
 	}
 
-	
-	private  void cargarDatos(List<Article> articles) {
-		
-		tituloText.setText(articles.get(0).getTitle());
-		descriptionText.setText(articles.get(0).getDescription());
-		publicatedText.setText(articles.get(0).getAuthor() + " " + articles.get(0).getPublishedAt());
-		Image image = new Image(articles.get(0).getUrlToImage());
-		imagen.setImage(image);
+	@FXML
+	void onNoticia1Action(ActionEvent event) {
 
-		tituloText1.setText(articles.get(1).getTitle());
-		descriptionText1.setText(articles.get(1).getDescription());
-		publicatedText1.setText(articles.get(1).getAuthor() + " " + articles.get(1).getPublishedAt());
-		Image image1 = new Image(articles.get(1).getUrlToImage());
-		imagen1.setImage(image1);
+	}
 
-		tituloText11.setText(articles.get(2).getTitle());
-		descriptionText11.setText(articles.get(2).getDescription());
-		publicatedText11.setText(articles.get(2).getAuthor() + " " + articles.get(2).getPublishedAt());
-		Image image11 = new Image(articles.get(2).getUrlToImage());
-		imagen11.setImage(image11);
-		
+	@FXML
+	void onNoticia2Action(ActionEvent event) {
+
+	}
+
+	@FXML
+	void onNoticia3Action(ActionEvent event) {
+
+	}
+
+	@FXML
+	void onNoticia4Action(ActionEvent event) {
+
+	}
+
+	public void initialize(URL location, ResourceBundle resources) {
+		if (pag == 1) {
+			anteriorPaginaButton.setDisable(true);
+		} else {
+			anteriorPaginaButton.setDisable(false);
+		}
+
+		NewsApiClient.ArticlesResponseCallback callback = new NewsApiClient.ArticlesResponseCallback() {
+			public void onSuccess(ArticleResponse response) {
+				cargarDatos(response.getArticles());
+			}
+
+			public void onFailure(Throwable throwable) {
+				System.err.println(throwable.getMessage());
+			}
+		};
+
+		newsApiClient.getEverything(new EverythingRequest.Builder().q("messi").language("es").pageSize(20).page(1)
+				.sortBy("publishedAt").build(), callback);
+
+	}
+
+	private void cargarDatos(List<Article> articles) {
+		paginaLabel.setText("" + pag);
+
+		if (pag == 1) {
+			cont = 0;
+		}
+		if (pag == 2) {
+			cont = 4;
+		}
+		if (pag == 3) {
+			cont = 8;
+		}
+		if (pag == 4) {
+			cont = 12;
+		}
+		if (pag == 5) {
+			cont = 16;
+		}
+		titulo1Text.setText(articles.get(cont).getTitle());
+		description1Text.setText(articles.get(cont).getDescription());
+		publicated1Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia1 = new Image(articles.get(cont).getUrlToImage());
+		noticia1Image.setImage(imagenNoticia1);
+
+		cont++;
+
+		titulo2Text.setText(articles.get(cont).getTitle());
+		description2Text.setText(articles.get(cont).getDescription());
+		publicated2Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia2 = new Image(articles.get(cont).getUrlToImage());
+		noticia2Image.setImage(imagenNoticia2);
+
+		cont++;
+
+		titulo3Text.setText(articles.get(cont).getTitle());
+		description3Text.setText(articles.get(cont).getDescription());
+		publicated3Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia3 = new Image(articles.get(cont).getUrlToImage());
+		noticia3Image.setImage(imagenNoticia3);
+
+		cont++;
+
+		titulo4Text.setText(articles.get(cont).getTitle());
+		description4Text.setText(articles.get(cont).getDescription());
+		publicated4Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia4 = new Image(articles.get(cont).getUrlToImage());
+		noticia4Image.setImage(imagenNoticia4);
+
+		cont++;
+
+	}
+
+	private void atrasDatos(List<Article> articles) {
+
+		paginaLabel.setText("" + pag);
+		if (pag == 2) {
+			cont = 8;
+		}
+		if (pag == 3) {
+			cont = 12;
+		}
+		if (pag == 4) {
+			cont = 16;
+		}
+		cont--;
+
+		titulo4Text.setText(articles.get(cont).getTitle());
+		description4Text.setText(articles.get(cont).getDescription());
+		publicated4Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia4 = new Image(articles.get(cont).getUrlToImage());
+		noticia4Image.setImage(imagenNoticia4);
+
+		cont--;
+
+		titulo3Text.setText(articles.get(cont).getTitle());
+		description3Text.setText(articles.get(cont).getDescription());
+		publicated3Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia3 = new Image(articles.get(cont).getUrlToImage());
+		noticia3Image.setImage(imagenNoticia3);
+
+		cont--;
+
+		titulo2Text.setText(articles.get(cont).getTitle());
+		description2Text.setText(articles.get(cont).getDescription());
+		publicated2Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia2 = new Image(articles.get(cont).getUrlToImage());
+		noticia2Image.setImage(imagenNoticia2);
+
+		cont--;
+
+		titulo1Text.setText(articles.get(cont).getTitle());
+		description1Text.setText(articles.get(cont).getDescription());
+		publicated1Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
+		Image imagenNoticia1 = new Image(articles.get(cont).getUrlToImage());
+		noticia1Image.setImage(imagenNoticia1);
+
 	}
 
 	public GridPane getRootGridPane() {
@@ -132,7 +321,5 @@ public class NoticiasController implements Initializable {
 	public void setRootGridPane(GridPane rootGridPane) {
 		RootGridPane = rootGridPane;
 	}
-
-	
 
 }
