@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<GridPane fx:id="RootGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="RootGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 	</columnConstraints>
@@ -31,7 +32,14 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button fx:id="anteriorPaginaButton" mnemonicParsing="false" onAction="#onAtrasAction" text="&lt;--" />
+                  <Button fx:id="anteriorPaginaButton" mnemonicParsing="false" onAction="#onAtrasAction">
+                     <graphic>
+                        <ImageView fx:id="anterioImage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/flechaMenos.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -41,7 +49,14 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button fx:id="siguientePaginaButton" mnemonicParsing="false" onAction="#onSiguienteAction" text="--&gt;" />
+                  <Button fx:id="siguientePaginaButton" mnemonicParsing="false" onAction="#onSiguienteAction">
+                     <graphic>
+                        <ImageView fx:id="siguienteImage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/flechaMas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </HBox>
          </children>
