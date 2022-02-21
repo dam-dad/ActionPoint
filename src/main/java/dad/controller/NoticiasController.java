@@ -1,6 +1,7 @@
 package dad.controller;
 
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -26,6 +27,13 @@ public class NoticiasController implements Initializable {
 
 	int cont = 0;
 	int pag = 1;
+
+	static String buscar = "Messi";
+
+	static String urlNoticia1 = "";
+	static String urlNoticia2 = "";
+	static String urlNoticia3 = "";
+	static String urlNoticia4 = "";
 
 	// logic
 
@@ -135,7 +143,7 @@ public class NoticiasController implements Initializable {
 			}
 		};
 
-		newsApiClient.getEverything(new EverythingRequest.Builder().q("messi").language("es").pageSize(20).page(1)
+		newsApiClient.getEverything(new EverythingRequest.Builder().q(buscar).language("es").pageSize(20).page(1)
 				.sortBy("publishedAt").build(), callback);
 	}
 
@@ -169,7 +177,7 @@ public class NoticiasController implements Initializable {
 			}
 		};
 
-		newsApiClient.getEverything(new EverythingRequest.Builder().q("messi").language("es").pageSize(20).page(1)
+		newsApiClient.getEverything(new EverythingRequest.Builder().q(buscar).language("es").pageSize(20).page(1)
 				.sortBy("publishedAt").build(), callback);
 
 	}
@@ -177,21 +185,87 @@ public class NoticiasController implements Initializable {
 	@FXML
 	void onNoticia1Action(ActionEvent event) {
 
+//		Runtime rt = Runtime.getRuntime();
+//		String url = urlNoticia1;
+//		try {
+//			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+		// Create a WebView
+		WebView browser = new WebView();
+
+		// Get WebEngine via WebView
+		WebEngine webEngine = browser.getEngine();
+
+		// Load page
+		webEngine.load(urlNoticia1);
+
 	}
 
 	@FXML
 	void onNoticia2Action(ActionEvent event) {
+		Runtime rt = Runtime.getRuntime();
+		String url = urlNoticia2;
+		try {
+			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		// Create a WebView
+		WebView browser = new WebView();
+
+		// Get WebEngine via WebView
+		WebEngine webEngine = browser.getEngine();
+
+		// Load page
+		webEngine.load(urlNoticia1);
 	}
 
 	@FXML
 	void onNoticia3Action(ActionEvent event) {
+		Runtime rt = Runtime.getRuntime();
+		String url = urlNoticia3;
+		try {
+			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		// Create a WebView
+		WebView browser = new WebView();
+
+		// Get WebEngine via WebView
+		WebEngine webEngine = browser.getEngine();
+
+		// Load page
+		webEngine.load(urlNoticia1);
 	}
 
 	@FXML
 	void onNoticia4Action(ActionEvent event) {
+		Runtime rt = Runtime.getRuntime();
+		String url = urlNoticia4;
+		try {
+			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+		// Create a WebView
+		WebView browser = new WebView();
+
+		// Get WebEngine via WebView
+		WebEngine webEngine = browser.getEngine();
+
+		// Load page
+		webEngine.load(urlNoticia1);
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
@@ -216,7 +290,29 @@ public class NoticiasController implements Initializable {
 
 	}
 
-	private void cargarDatos(List<Article> articles) {
+	public void initialize(URL location, ResourceBundle resources, String palabraBuscar) {
+		if (pag == 1) {
+			anteriorPaginaButton.setDisable(true);
+		} else {
+			anteriorPaginaButton.setDisable(false);
+		}
+
+		NewsApiClient.ArticlesResponseCallback callback = new NewsApiClient.ArticlesResponseCallback() {
+			public void onSuccess(ArticleResponse response) {
+				cargarDatos(response.getArticles());
+			}
+
+			public void onFailure(Throwable throwable) {
+				System.err.println(throwable.getMessage());
+			}
+		};
+
+		newsApiClient.getEverything(new EverythingRequest.Builder().q(palabraBuscar).language("es").pageSize(20).page(1)
+				.sortBy("publishedAt").build(), callback);
+
+	}
+
+	public void cargarDatos(List<Article> articles) {
 		paginaLabel.setText("" + pag);
 
 		if (pag == 1) {
@@ -239,6 +335,7 @@ public class NoticiasController implements Initializable {
 		publicated1Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia1 = new Image(articles.get(cont).getUrlToImage());
 		noticia1Image.setImage(imagenNoticia1);
+		urlNoticia1 = articles.get(cont).getUrl();
 
 		cont++;
 
@@ -247,7 +344,7 @@ public class NoticiasController implements Initializable {
 		publicated2Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia2 = new Image(articles.get(cont).getUrlToImage());
 		noticia2Image.setImage(imagenNoticia2);
-
+		urlNoticia2 = articles.get(cont).getUrl();
 		cont++;
 
 		titulo3Text.setText(articles.get(cont).getTitle());
@@ -255,7 +352,7 @@ public class NoticiasController implements Initializable {
 		publicated3Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia3 = new Image(articles.get(cont).getUrlToImage());
 		noticia3Image.setImage(imagenNoticia3);
-
+		urlNoticia3 = articles.get(cont).getUrl();
 		cont++;
 
 		titulo4Text.setText(articles.get(cont).getTitle());
@@ -263,7 +360,7 @@ public class NoticiasController implements Initializable {
 		publicated4Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia4 = new Image(articles.get(cont).getUrlToImage());
 		noticia4Image.setImage(imagenNoticia4);
-
+		urlNoticia4 = articles.get(cont).getUrl();
 		cont++;
 
 	}
@@ -320,6 +417,46 @@ public class NoticiasController implements Initializable {
 
 	public void setRootGridPane(GridPane rootGridPane) {
 		RootGridPane = rootGridPane;
+	}
+
+	public static String getBuscar() {
+		return buscar;
+	}
+
+	public static void setBuscar(String buscar) {
+		NoticiasController.buscar = buscar;
+	}
+
+	public static String getUrlNoticia1() {
+		return urlNoticia1;
+	}
+
+	public static void setUrlNoticia1(String urlNoticia1) {
+		NoticiasController.urlNoticia1 = urlNoticia1;
+	}
+
+	public static String getUrlNoticia2() {
+		return urlNoticia2;
+	}
+
+	public static void setUrlNoticia2(String urlNoticia2) {
+		NoticiasController.urlNoticia2 = urlNoticia2;
+	}
+
+	public static String getUrlNoticia3() {
+		return urlNoticia3;
+	}
+
+	public static void setUrlNoticia3(String urlNoticia3) {
+		NoticiasController.urlNoticia3 = urlNoticia3;
+	}
+
+	public static String getUrlNoticia4() {
+		return urlNoticia4;
+	}
+
+	public static void setUrlNoticia4(String urlNoticia4) {
+		NoticiasController.urlNoticia4 = urlNoticia4;
 	}
 
 }
