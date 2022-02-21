@@ -44,8 +44,8 @@ public class NoticiasController implements Initializable {
 
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
 
-	NoticiaWebController noticiasWeb;
-	
+	// NoticiaWebController noticiasWeb;
+
 	// view
 
 	@FXML
@@ -201,10 +201,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		
-		
-		
-		
 	}
 
 	@FXML
@@ -218,7 +214,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-	
 	}
 
 	@FXML
@@ -232,7 +227,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		
 	}
 
 	@FXML
@@ -246,7 +240,6 @@ public class NoticiasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
