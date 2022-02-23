@@ -4,6 +4,8 @@ Centralizador de noticias
 ![LogoAP(Blanco)] https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/images/LogoAPBlanco.png
 https://raw.githubusercontent.com/GabrielPerezMinik/ActionPoint/master/images/main/src/main/resources/images/LogoAPBlanco.png
 
+![](/main/src/main/resources/images/LogoAPBlanco.png)
+
 ## Historia
 
 Nuestros mayores suelen buscar noticias a diario en internet en diferentes sitios por lo que se nos ocurrió  hacer un programa que facilitara esa laboral.
