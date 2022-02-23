@@ -13,7 +13,7 @@ Nuestros mayores suelen buscar noticias a diario en internet en diferentes sitio
 
 ## Visión general del proyecto(UML)
 
-https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/Diagrama1.png?raw=true
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/Diagrama1.png?raw=true)
 
 
 
@@ -65,13 +65,13 @@ Una vez que descargamos el programa nos metemos en Action Point y buscamos la Ca
 
 
 
-https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/PoliticasDeUso.PNG?raw=true
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/PoliticasDeUso.PNG?raw=true)
 
-https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/image.png?raw=true
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/image.png?raw=true)
 
-https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/darleClick.png?raw=true
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/darleClick.png?raw=true)
 
-https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/InstalacionFull.png?raw=true
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/InstalacionFull.png?raw=true)
 
 
 
