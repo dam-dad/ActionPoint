@@ -1,7 +1,7 @@
 # ActionPoint
 Centralizador de noticias
 
-![LogoAP(Blanco)](C:\Users\Gapaz\Desktop\AED\ActionPoint\src\main\resources\images\LogoAP(Blanco).png)
+![LogoAP(Blanco)](ActionPoint\src\main\resources\images\LogoAP(Blanco).png)
 
 ## Historia
 
