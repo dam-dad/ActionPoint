@@ -57,7 +57,7 @@ Por ultimo existe un botón que nos permite salir de la aplicación cómodamente
 
 ## Instalador
 
-![ActionPoint_v1.0](https://github.com/dam-dad/ActionPoint/releases)
+[ActionPoint_v1.0](https://github.com/dam-dad/ActionPoint/releases)
 
 ## Instalación
 
