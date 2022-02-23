@@ -23,10 +23,10 @@ public class RootController implements Initializable {
 
 	OpcionesController opcionesController = new OpcionesController();
 	NoticiasController noticiasController = new NoticiasController();
-	NoticiaWebController web=new NoticiaWebController();
+	NoticiaWebController web = new NoticiaWebController();
 
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
-	
+
 	@FXML
 	private BorderPane View;
 
@@ -63,6 +63,8 @@ public class RootController implements Initializable {
 		periodicoTab.setContent(noticiasController.getRootGridPane());
 		tvTab.setContent(web.getView());
 
+		noticiasController.setWebController(web);
+
 	}
 
 	@FXML
@@ -72,7 +74,7 @@ public class RootController implements Initializable {
 			public void onSuccess(ArticleResponse response) {
 				noticiasController.setBuscar(busquedaField.getText());
 				noticiasController.cargarDatos(response.getArticles());
-				
+
 			}
 
 			public void onFailure(Throwable throwable) {
@@ -80,8 +82,8 @@ public class RootController implements Initializable {
 			}
 		};
 
-		newsApiClient.getEverything(new EverythingRequest.Builder().q(busquedaField.getText()).language("es").pageSize(20).page(1)
-				.sortBy("publishedAt").build(), callback);
+		newsApiClient.getEverything(new EverythingRequest.Builder().q(busquedaField.getText()).language("es")
+				.pageSize(20).page(1).sortBy("publishedAt").build(), callback);
 
 	}
 
