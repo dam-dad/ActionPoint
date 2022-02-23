@@ -198,7 +198,7 @@ public class NoticiasController implements Initializable {
 
 	@FXML
 	void onNoticia2Action(ActionEvent event) {
-		webController.setUrl(urlNoticia4);
+		webController.setUrl(urlNoticia2);
 
 	}
 
