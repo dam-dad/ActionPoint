@@ -4,7 +4,8 @@ Centralizador de noticias
 ![LogoAP(Blanco)] https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/images/LogoAPBlanco.png
 https://raw.githubusercontent.com/GabrielPerezMinik/ActionPoint/master/images/main/src/main/resources/images/LogoAPBlanco.png
 
-![](/main/src/main/resources/images/LogoAPBlanco.png)
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/images/LogoAPBlanco.png?raw=true
+
 
 ## Historia
 
