@@ -43,7 +43,7 @@ public class NoticiasController implements Initializable {
 	// logic
 
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
-
+	NoticiaWebController webController;
 	// NoticiaWebController noticiasWeb;
 
 	// view
@@ -192,53 +192,25 @@ public class NoticiasController implements Initializable {
 	@FXML
 	void onNoticia1Action(ActionEvent event) {
 
-		Runtime rt = Runtime.getRuntime();
-		String url = urlNoticia1;
-		try {
-			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		webController.setUrl(urlNoticia1);
 
 	}
 
 	@FXML
 	void onNoticia2Action(ActionEvent event) {
-		Runtime rt = Runtime.getRuntime();
-		String url = urlNoticia2;
-		try {
-			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		webController.setUrl(urlNoticia4);
 
 	}
 
 	@FXML
 	void onNoticia3Action(ActionEvent event) {
-		Runtime rt = Runtime.getRuntime();
-		String url = urlNoticia3;
-		try {
-			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		webController.setUrl(urlNoticia3);
 
 	}
 
 	@FXML
 	void onNoticia4Action(ActionEvent event) {
-		Runtime rt = Runtime.getRuntime();
-		String url = urlNoticia4;
-		try {
-			rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		webController.setUrl(urlNoticia4);
 
 	}
 
@@ -361,7 +333,7 @@ public class NoticiasController implements Initializable {
 		publicated4Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia4 = new Image(articles.get(cont).getUrlToImage());
 		noticia4Image.setImage(imagenNoticia4);
-
+		urlNoticia4 = articles.get(cont).getUrl();
 		cont--;
 
 		titulo3Text.setText(articles.get(cont).getTitle());
@@ -369,7 +341,7 @@ public class NoticiasController implements Initializable {
 		publicated3Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia3 = new Image(articles.get(cont).getUrlToImage());
 		noticia3Image.setImage(imagenNoticia3);
-
+		urlNoticia3 = articles.get(cont).getUrl();
 		cont--;
 
 		titulo2Text.setText(articles.get(cont).getTitle());
@@ -377,7 +349,7 @@ public class NoticiasController implements Initializable {
 		publicated2Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia2 = new Image(articles.get(cont).getUrlToImage());
 		noticia2Image.setImage(imagenNoticia2);
-
+		urlNoticia2 = articles.get(cont).getUrl();
 		cont--;
 
 		titulo1Text.setText(articles.get(cont).getTitle());
@@ -385,7 +357,7 @@ public class NoticiasController implements Initializable {
 		publicated1Text.setText(articles.get(cont).getAuthor() + " " + articles.get(cont).getPublishedAt());
 		Image imagenNoticia1 = new Image(articles.get(cont).getUrlToImage());
 		noticia1Image.setImage(imagenNoticia1);
-
+		urlNoticia1 = articles.get(cont).getUrl();
 	}
 
 	public GridPane getRootGridPane() {
@@ -404,36 +376,9 @@ public class NoticiasController implements Initializable {
 		NoticiasController.buscar = buscar;
 	}
 
-	public static String getUrlNoticia1() {
-		return urlNoticia1;
+	public void setWebController(NoticiaWebController webController) {
+		this.webController = webController;
 	}
 
-	public static void setUrlNoticia1(String urlNoticia1) {
-		NoticiasController.urlNoticia1 = urlNoticia1;
-	}
-
-	public static String getUrlNoticia2() {
-		return urlNoticia2;
-	}
-
-	public static void setUrlNoticia2(String urlNoticia2) {
-		NoticiasController.urlNoticia2 = urlNoticia2;
-	}
-
-	public static String getUrlNoticia3() {
-		return urlNoticia3;
-	}
-
-	public static void setUrlNoticia3(String urlNoticia3) {
-		NoticiasController.urlNoticia3 = urlNoticia3;
-	}
-
-	public static String getUrlNoticia4() {
-		return urlNoticia4;
-	}
-
-	public static void setUrlNoticia4(String urlNoticia4) {
-		NoticiasController.urlNoticia4 = urlNoticia4;
-	}
-
+	
 }
