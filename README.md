@@ -1,7 +1,8 @@
 # ActionPoint
 Centralizador de noticias
 
-![LogoAP(Blanco)] (ActionPoint\src\main\resources\images\LogoAPBlanco.png)
+![LogoAP(Blanco)] https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/images/LogoAPBlanco.png
+
 
 ## Historia
 
