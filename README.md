@@ -1,7 +1,7 @@
 # ActionPoint
 Centralizador de noticias
 
-![LogoAP(Blanco)](ActionPoint\src\main\resources\images\LogoAP(Blanco).png)
+![LogoAP(Blanco)](ActionPoint\src\main\resources\images\LogoAPBlanco.png)
 
 ## Historia
 
