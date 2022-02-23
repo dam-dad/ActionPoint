@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<GridPane fx:id="RootGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="RootGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 	</columnConstraints>
@@ -63,67 +63,70 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                <children>
                   <Text fx:id="titulo1Text" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text fx:id="description1Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="description1Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="800.0" />
                   <Text fx:id="publicated1Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </VBox>
-            <Button fx:id="noticia1Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#onNoticia1Action" prefHeight="150.0" prefWidth="150.0" text="Button">
+            <Button fx:id="noticia1Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#onNoticia1Action" text="Button">
                <graphic>
-                  <ImageView fx:id="noticia1Image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="noticia1Image" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
                <children>
                   <Text fx:id="titulo2Text" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text fx:id="description2Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="description2Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="800.0" />
                   <Text fx:id="publicated2Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </VBox>
             <Button fx:id="noticia2Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#onNoticia2Action" text="Button">
                <graphic>
-                  <ImageView fx:id="noticia2Image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="noticia2Image" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
          </children>
       </HBox>
       <HBox layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
                <children>
                   <Text fx:id="titulo3Text" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text fx:id="description3Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="description3Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="800.0" />
                   <Text fx:id="publicated3Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </VBox>
             <Button fx:id="noticia3Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#onNoticia3Action" text="Button">
                <graphic>
-                  <ImageView fx:id="noticia3Image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="noticia3Image" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
          </children>
+         <GridPane.margin>
+            <Insets right="1.0" />
+         </GridPane.margin>
       </HBox>
       <Separator prefWidth="200.0" GridPane.rowIndex="1" />
       <Separator prefWidth="200.0" GridPane.rowIndex="3" />
       <Separator prefWidth="200.0" GridPane.rowIndex="5" />
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" HBox.hgrow="ALWAYS">
                <children>
                   <Text fx:id="titulo4Text" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Text fx:id="description4Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text fx:id="description4Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="800.0" />
                   <Text fx:id="publicated4Text" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                </children>
             </VBox>
             <Button fx:id="noticia4Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#onNoticia4Action" text="Button">
                <graphic>
-                  <ImageView fx:id="noticia4Image" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="noticia4Image" fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
             </Button>
          </children>
