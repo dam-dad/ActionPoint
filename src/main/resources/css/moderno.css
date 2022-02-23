@@ -12,16 +12,17 @@
 }
 
 #titulo1Text, #description1Text, #publicated1Text,#titulo2Text, #description2Text, #publicated2Text,#titulo3Text, #description3Text, #publicated3Text,#titulo4Text, #description4Text, #publicated4Text{
--fx-fill: white;
--fx-font-weight: bold;
--fx-font-size: 10.0pt;
+	-fx-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size: 10.0pt;
 }
+
 #titulo1Text,#titulo2Text,#titulo3Text,#titulo4Text{
--fx-font-size: 20.0pt;
+	-fx-font-size: 20.0pt;
 }
 
 .label{
--fx-text-fill: white;
+	-fx-text-fill: white;
 	-fx-font-weight: bold;
 }
 
@@ -43,32 +44,23 @@
 	
 }
 
-
 .combo-box > .list-cell {
-
 	-fx-text-fill: white;
-	
 }
 
-
 .combo-box:hover > .list-cell {
--fx-background-color:darkgray;
+	-fx-background-color:darkgray;
 	-fx-text-fill: black;
-	
 }
 
 .combo-box .list-cell {
-
 	-fx-background-color: #3A3736;
 	-fx-text-fill:white;
-	
 }
 
 .combo-box .list-cell:hover {
-
 	-fx-background-color: darkgray;
 	-fx-text-fill:black;
-	
 }
 
 .combo-box:hover{
@@ -79,17 +71,15 @@
 
 #avatarImages{
 	-fx-background-radius: 5.0;
-
 }
+
 .tab {
     -fx-background-color: #3A3736;
-    
 }
 
 .tab-pane>*.tab-header-area>*.tab-header-background
 {
     -fx-background-color:  -fx-text-box-border, #333333;
-
 }
 
 .tab-label {
