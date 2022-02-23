@@ -30,28 +30,17 @@ public class OpcionesController implements Initializable {
 	private VBox view;
 
 	@FXML
-	private ImageView avatarImages;
-
-	@FXML
 	private JFXToggleButton temaToggle;
 
 	@FXML
-	private ComboBox<String> filtrosCombo;
-	
-	ObservableList<String> items = FXCollections.observableArrayList("Deporte", "Moda", "Motor", "Politica", "Covid", "Inmigracion", "eSports");	
-
-	@FXML
-	private Button historialButton;
-
-	@FXML
-	private Button avatarButton;
+	private ImageView avatarImages;
 
 	@FXML
 	private Button cerrarCesionButton;
-	
+
 	Stage stage;
-	
-	String css=this.getClass().getResource("/css/moderno.css").toString();
+
+	String css = this.getClass().getResource("/css/moderno.css").toString();
 
 	public OpcionesController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/OpcionesView.fxml"));
@@ -60,33 +49,21 @@ public class OpcionesController implements Initializable {
 	}
 
 	public void initialize(URL location, ResourceBundle resources) {
-		
-		
-		 filtrosCombo.setItems(items);
-		
-			
+
 		temaToggle.selectedProperty().addListener(new ChangeListener<Boolean>() {
 
 			@Override
 			public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
 				if (temaToggle.isSelected() == true) {
 					view.getStylesheets().clear();
-					temaToggle.getScene().getRoot().getStylesheets()
-							.add(css);
+					temaToggle.getScene().getRoot().getStylesheets().add(css);
 				} else {
 					view.getStylesheets().clear();
-					temaToggle.getScene().getRoot().getStylesheets()
-							.remove((css));
+					temaToggle.getScene().getRoot().getStylesheets().remove((css));
 				}
 
 			}
 		});
-		
-		
-	}
-
-	@FXML
-	void onCambiarAction(ActionEvent event) {
 
 	}
 
@@ -94,12 +71,6 @@ public class OpcionesController implements Initializable {
 	void onCerrarAction(ActionEvent event) {
 
 		salidaSesion();
-		
-	}
-	
-
-	@FXML
-	void onHistorialAction(ActionEvent event) {
 
 	}
 
@@ -107,17 +78,16 @@ public class OpcionesController implements Initializable {
 		return view;
 	}
 
-	
 	private void salidaSesion() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Cerrar Sesion");
 		alert.setHeaderText("Vas a cerrar sesion");
 		alert.setContentText("¿Quieres guardar antes de salir?");
-		
-			if(alert.showAndWait().get()== ButtonType.OK) {
-				stage = (Stage) view.getScene().getWindow();
-				stage.close();
-			}
+
+		if (alert.showAndWait().get() == ButtonType.OK) {
+			stage = (Stage) view.getScene().getWindow();
+			stage.close();
+		}
 	}
-	
+
 }
