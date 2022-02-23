@@ -5,7 +5,11 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
+/**
+ * Clase que lanza la interfaz del programa
+ * @author Juan2
+ *
+ */
 public class App extends Application {
 	
 	private RootController rootController;

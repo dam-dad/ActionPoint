@@ -27,7 +27,11 @@ import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
+/**
+ * Clase que funciona como el controlador de la vista que muestra las noticias
+ * @author Juan2
+ *
+ */
 public class NoticiasController implements Initializable {
 
 	int cont = 0;
@@ -124,9 +128,11 @@ public class NoticiasController implements Initializable {
 	void onBoton(ActionEvent event) {
 
 	}
-
+	/**
+	 * Metodo para pasar pagina y que cargue las noticias en la correspondiente pagina
+	 * @param event
+	 */
 	@FXML
-
 	void onSiguienteAction(ActionEvent event) {
 		if (pag == 4) {
 			siguientePaginaButton.setDisable(true);
@@ -154,13 +160,21 @@ public class NoticiasController implements Initializable {
 				.sortBy("publishedAt").build(), callback);
 	}
 
+	
+	/**
+	 * Constructor que carga la interfaz 
+	 * @throws IOException
+	 */
 	public NoticiasController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/NoticiasView.fxml"));
 		loader.setController(this);
 		loader.load();
 
 	}
-
+	/**
+	 * Metodo para cargar la pagina anterior y distribuir las noticias de esa pagina
+	 * @param event
+	 */
 	@FXML
 	void onAtrasAction(ActionEvent event) {
 
@@ -188,32 +202,45 @@ public class NoticiasController implements Initializable {
 				.sortBy("publishedAt").build(), callback);
 
 	}
-
+	/**
+	 * Metodo para insertar la url de la noticia en el webView correspondiente
+	 * @param event
+	 */
 	@FXML
 	void onNoticia1Action(ActionEvent event) {
 
 		webController.setUrl(urlNoticia1);
 
 	}
-
+	/**
+	 * Metodo para insertar la url de la noticia en el webView correspondiente
+	 * @param event
+	 */
 	@FXML
 	void onNoticia2Action(ActionEvent event) {
 		webController.setUrl(urlNoticia2);
 
 	}
-
+	/**
+	 * Metodo para insertar la url de la noticia en el webView correspondiente
+	 * @param event
+	 */
 	@FXML
 	void onNoticia3Action(ActionEvent event) {
 		webController.setUrl(urlNoticia3);
 
 	}
-
+	/**
+	 * Metodo para insertar la url de la noticia en el webView correspondiente
+	 * @param event
+	 */
 	@FXML
 	void onNoticia4Action(ActionEvent event) {
 		webController.setUrl(urlNoticia4);
 
 	}
-
+	
+	
 	public void initialize(URL location, ResourceBundle resources) {
 		if (pag == 1) {
 			anteriorPaginaButton.setDisable(true);
@@ -235,7 +262,12 @@ public class NoticiasController implements Initializable {
 				.sortBy("publishedAt").build(), callback);
 
 	}
-
+/**
+ * metodo que define las acciones al iniciarse la parte de las noticias que controla este controller
+ * @param location
+ * @param resources
+ * @param palabraBuscar
+ */
 	public void initialize(URL location, ResourceBundle resources, String palabraBuscar) {
 		if (pag == 1) {
 			anteriorPaginaButton.setDisable(true);
@@ -258,6 +290,10 @@ public class NoticiasController implements Initializable {
 
 	}
 
+	/**
+	 * Metodo para recoger los datos recibidos de la api y distribuirla en las paginas
+	 * @param articles
+	 */
 	public void cargarDatos(List<Article> articles) {
 		paginaLabel.setText("" + pag);
 
@@ -310,7 +346,10 @@ public class NoticiasController implements Initializable {
 		cont++;
 
 	}
-
+	/**
+	 * funcion que se utiliza en el metodo que carga las noticias en sus sitios correspondientes
+	 * @param articles
+	 */
 	private void atrasDatos(List<Article> articles) {
 
 		paginaLabel.setText("" + pag);

@@ -23,7 +23,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
+/**
+ * Controller para el menu lateral de opciones
+ * @author Juan2
+ *
+ */
 public class OpcionesController implements Initializable {
 
 	@FXML
@@ -42,6 +46,10 @@ public class OpcionesController implements Initializable {
 
 	String css = this.getClass().getResource("/css/moderno.css").toString();
 
+	/**
+	 * Constructor que carga la interfaz
+	 * @throws IOException
+	 */
 	public OpcionesController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/OpcionesView.fxml"));
 		loader.setController(this);
@@ -77,12 +85,14 @@ public class OpcionesController implements Initializable {
 	public VBox getView() {
 		return view;
 	}
-
+	/**
+	 * Metodo que te solicita confirmacion para cerrar la aplicacion
+	 */
 	private void salidaSesion() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Cerrar Sesion");
-		alert.setHeaderText("Vas a cerrar sesion");
-		alert.setContentText("¿Quieres guardar antes de salir?");
+		alert.setTitle("Cerrar aplicacion");
+		alert.setHeaderText("Vas a cerrar la aplicacion");
+		
 
 		if (alert.showAndWait().get() == ButtonType.OK) {
 			stage = (Stage) view.getScene().getWindow();

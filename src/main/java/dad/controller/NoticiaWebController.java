@@ -16,11 +16,19 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-
+/**
+ * Clase que inicializa el WebView para mostrar la pagina de la noticia que se elija
+ * @author Juan2
+ *
+ */
 public class NoticiaWebController implements Initializable{
 
 	private StringProperty url = new SimpleStringProperty();
 
+	/**
+	 * Constructor de la clase que carga la interfaz
+	 * @throws IOException
+	 */
 	public NoticiaWebController() throws IOException {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/WebNoticiasView.fxml"));

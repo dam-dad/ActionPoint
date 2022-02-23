@@ -19,6 +19,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * Controller raiz que maneja la interfaz principal del programa
+ * @author Juan2
+ *
+ */
 public class RootController implements Initializable {
 
 	OpcionesController opcionesController = new OpcionesController();
@@ -50,7 +55,10 @@ public class RootController implements Initializable {
 
 	@FXML
 	private BorderPane leftPane;
-
+/**
+ * Constructor que carga la interfaz
+ * @throws IOException
+ */
 	public RootController() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/RootView.fxml"));
 		loader.setController(this);
@@ -66,7 +74,10 @@ public class RootController implements Initializable {
 		noticiasController.setWebController(web);
 
 	}
-
+/**
+ * Metodo para enviar la palabra que se introduzca en el textfield del buscador y se cargen noticias con ella
+ * @param event
+ */
 	@FXML
 	void OnBuscarNoticiaAction(ActionEvent event) {
 
