@@ -55,7 +55,9 @@ Por ultimo existe un botón que nos permite salir de la aplicación cómodamente
 | `Mac`                   | ❌         |         |
 | `windows`               | ✔️         | ✔️       |
 
+## Instalador
 
+[ActionPoint_v1.0]https://github.com/dam-dad/ActionPoint/releases
 
 ## Instalación
 
@@ -83,3 +85,10 @@ Una vez que descargamos el programa nos metemos en Action Point y buscamos la Ca
 - [SamuelGlezMrt ](https://github.com/SamuelGlezMrt)
 - [AdrianNietoRamos ](https://github.com/AdrianNietoRamos)
 - [GabrielPerezMinik ](https://github.com/GabrielPerezMinik)
+
+## Blibliografia
+
+[Instalador de fvarrui]https://github.com/fvarrui/JavaPackager
+[Api Usada]https://newsapi.org/
+[Api news en Github de KwabenBerko]https://github.com/KwabenBerko/News-API-Java
+[Autor de los recursos didacticos usados]https://github.com/fvarrui
