@@ -1,12 +1,19 @@
 # ActionPoint
 Centralizador de noticias
 
+
+
 ![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/images/LogoAPBlanco.png?raw=true)
+
 
 
 ## Historia
 
 Nuestros mayores suelen buscar noticias a diario en internet en diferentes sitios por lo que se nos ocurrió  hacer un programa que facilitara esa laboral.
+
+## Visión general del proyecto(UML)
+
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/Diagrama1.png?raw=true
 
 
 
@@ -14,29 +21,59 @@ Nuestros mayores suelen buscar noticias a diario en internet en diferentes sitio
 
 
 
-La interfaz se Constituye de un buscador, un seleccionador de temas, 
+La interfaz se Constituye de un buscador, un seleccionador de temas claro-oscuro, un webview en el que
+
+podremos cargar un total de 20 noticias.
+
+Este componente nos cambia el tema oscuro-blanco [TOGG]:
+
+(Insertar Foto)
+
+Escribes tu consulta para buscar la noticia relacionada [Buscador de noticias]:
+
+(Insertar Foto)
+
+Existen dos botones que nos permiten desplazarnos entre las noticias que muestran [Flecha para moverte]:
+
+(Insertar Foto)
+
+Una vez que pulsamos una imagen nos carga la noticia completa en un webview que nos permite navegar por toda esta [Webview]:
+
+(Insertar Foto)
+
+Por ultimo existe un botón que nos permite salir de la aplicación cómodamente
 
 
 
-Tema oscuro:
-
-Buscador de noticias:
-
-flecha para moverte:
-
-webview:
-
-20 noticas
 
 
-
-**Platform specific properties**
+**Plataformas soportadas para la aplicación**
 
 | Plataformas disponibles | Mandatory | Default |
 | ----------------------- | --------- | ------- |
 | `linux`                 | ✔️         |         |
 | `Mac`                   | ❌         |         |
 | `windows`               | ✔️         | ✔️       |
+
+
+
+## Instalación
+
+
+
+Una vez que descargamos el programa nos metemos en Action Point y buscamos la Carpeta : target-->buscamos el .EXE--> le damos siguiente hasta la creación de acceso directo en cuyo caso marcamos el check--> seguidamente nos dará la  opción de Instalar y por ultimo esperamos 
+
+
+
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/PoliticasDeUso.PNG?raw=true
+
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/image.png?raw=true
+
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/darleClick.png?raw=true
+
+https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/InstalacionFull.png?raw=true
+
+
 
 ## Integrantes
 
