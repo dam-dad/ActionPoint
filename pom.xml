@@ -13,6 +13,35 @@
 		<exec.mainClass>dad.actionpoint.Main</exec.mainClass>
 	</properties>
 
+<build>
+		<plugins>
+			<plugin>
+				<groupId>io.github.fvarrui</groupId>
+				<artifactId>javapackager</artifactId>
+				<version>1.6.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>package</goal>
+						</goals>
+						<configuration>
+							<!-- mandatory -->
+							<mainClass>dad.actionpoint.Main</mainClass>
+							<!-- optional -->
+							<bundleJre>true</bundleJre>
+							<generateInstaller>true</generateInstaller>
+							<administratorRequired>false</administratorRequired>
+							<platform>windows</platform>
+							<additionalResources>
+							</additionalResources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.openjfx</groupId>
