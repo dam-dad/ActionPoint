@@ -3,6 +3,7 @@ package dad.actionpoint;
 import dad.controller.RootController;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -17,6 +18,7 @@ public class App extends Application {
 		
 		primaryStage.setTitle("ActionPoint");
 		primaryStage.setScene(scene);
+		primaryStage.getIcons().add(new Image("/images/favicon48.png"));
 		primaryStage.show();
 
 	}
