@@ -23,6 +23,7 @@ public class RootController implements Initializable {
 
 	OpcionesController opcionesController = new OpcionesController();
 	NoticiasController noticiasController = new NoticiasController();
+	NoticiaWebController web=new NoticiaWebController();
 
 	NewsApiClient newsApiClient = new NewsApiClient(ResourceBundle.getBundle("token").getString("news.api.token"));
 	
@@ -60,6 +61,7 @@ public class RootController implements Initializable {
 
 		leftPane.setTop(opcionesController.getView());
 		periodicoTab.setContent(noticiasController.getRootGridPane());
+		tvTab.setContent(web.getView());
 
 	}
 
