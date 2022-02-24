@@ -96,3 +96,7 @@ Una vez que descargamos el programa nos metemos en Action Point y buscamos la Ca
 - [Api Usada](https://newsapi.org/)
 - [Api news en Github de KwabenBerko](https://github.com/KwabenBerko/News-API-Java)
 - [Autor de los recursos didacticos usados](https://github.com/fvarrui)
+
+## Licencia
+
+GNU General Public License v3.0
