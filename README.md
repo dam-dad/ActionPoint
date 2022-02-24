@@ -27,22 +27,26 @@ podremos cargar un total de 20 noticias.
 
 Este componente nos cambia el tema oscuro-blanco [TOGG]:
 
-(Insertar Foto)
+
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/cambiarTema.png?raw=true)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/temaoscuro.png?raw=true)
 
 Escribes tu consulta para buscar la noticia relacionada [Buscador de noticias]:
 
-(Insertar Foto)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/buscarNoticia.png?raw=true)
 
 Existen dos botones que nos permiten desplazarnos entre las noticias que muestran [Flecha para moverte]:
 
-(Insertar Foto)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/pagina1.png?raw=true)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/cambiarPag.png?raw=true)
 
 Una vez que pulsamos una imagen nos carga la noticia completa en un webview que nos permite navegar por toda esta [Webview]:
 
-(Insertar Foto)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/visualizar.png?raw=true)
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/verNoticia.png?raw=true)
 
 Por ultimo existe un botón que nos permite salir de la aplicación cómodamente
-
+![image](https://github.com/dam-dad/ActionPoint/blob/main/src/main/resources/recursosImg/Cerrar.png?raw=true)
 
 
 
