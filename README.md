@@ -53,7 +53,7 @@ Por ultimo existe un botón que nos permite salir de la aplicación cómodamente
 
 **Plataformas soportadas para la aplicación**
 
-| Plataformas disponibles | Mandatory | Default |
+| Plataformas disponibles | Distros Soportadas | Default |
 | ----------------------- | --------- | ------- |
 | `linux`                 | ✔️         |         |
 | `Mac`                   | ❌         |         |
